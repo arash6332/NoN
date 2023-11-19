@@ -14,9 +14,6 @@ git clone https://github.com/celestiaorg/celestia-app.git
 cd celestia-app
 
 
-
--------------------------------
-cd $HOME
 rm -rf networks
 git clone https://github.com/celestiaorg/networks.git
 https://github.com/celestiaorg/networks
