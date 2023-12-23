@@ -168,3 +168,6 @@ $request celestia1a35035fu83jkeeqz00d3jmt3k5wu5x3lyvn6qp
 
 ------------------------------------- 
 با کد زیر هم میتونید موجودی ولت خ
+max_num_inbound_peers=40 
+max_num_outbound_peers=10 
+max_connections=50
