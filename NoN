@@ -171,3 +171,6 @@ $request celestia1a35035fu83jkeeqz00d3jmt3k5wu5x3lyvn6qp
 max_num_inbound_peers=40 
 max_num_outbound_peers=10 
 max_connections=50
+celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
+
+-------------------------------------
