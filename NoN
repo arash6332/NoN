@@ -1,4 +1,4 @@
-
+hi
 ---------------------------------------------
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu -y
 -----------------------------------------------
@@ -174,3 +174,8 @@ max_connections=50
 celestia-appd init $CELESTIA_NODENAME --chain-id $CELESTIA_CHAIN
 
 -------------------------------------
+------------------------------------------------
+CELESTIA_VALOPER=$(celestia-appd keys show $CELESTIA_WALLET --bech val -a) 
+echo $CELESTIA_VALOPER 
+echo 'export CELESTIA_VALOPER='${CELESTIA_VALOPER} >> $HOME/.bash_profile 
+source $HOME/.bash_profile
