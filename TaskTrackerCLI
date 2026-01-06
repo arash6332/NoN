@@ -1,31 +1,46 @@
-# TaskTrackerCLI
-# A simple command-line task manager
+SmartTaskLogger/
+│
+├── main.py
+├── README.md
+└── tasks.txt
+# SmartTaskLogger
 
-import json
-import os
+SmartTaskLogger is a simple Python application that allows users to log daily tasks
+and store them in a text file with timestamps.
 
-FILE_NAME = "tasks.json"
+## Features
+- Add new tasks
+- Automatically saves tasks with date and time
+- Simple and beginner-friendly code
 
-def load_tasks():
-    if not os.path.exists(FILE_NAME):
-        return []
-    with open(FILE_NAME, "r") as file:
-        return json.load(file)
+## Requirements
+- Python 3.x
 
-def save_tasks(tasks):
-    with open(FILE_NAME, "w") as file:
-        json.dump(tasks, file, indent=4)
+## How to Run
+```bash
+python main.py
+Enter your task: Finish GitHub project
+Task saved successfully!
 
-def add_task(title):
-    tasks = load_tasks()
-    tasks.append({"title": title, "completed": False})
-    save_tasks(tasks)
-    print("Task added successfully.")
+---
 
-def list_tasks():
-    tasks = load_tasks()
-    if not tasks:
-        print("No tasks found.")
-        return
+## 🧠 main.py
+```python
+from datetime import datetime
 
-    for index, task in enumerate(t
+def log_task(task):
+    time_stamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("tasks.txt", "a") as file:
+        file.write(f"[{time_stamp}] {task}\n")
+
+def main():
+    print("=== SmartTaskLogger ===")
+    task = input("Enter your task: ")
+    if task.strip():
+        log_task(task)
+        print("Task saved successfully!")
+    else:
+        print("No task entered.")
+
+if __name__ == "__main__":
+    main()
