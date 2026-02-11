@@ -33,6 +33,10 @@ def log_task(task):
     with open("tasks.txt", "a") as file:
         file.write(f"[{time_stamp}] {task}\n")
 
+## Features
+- Add new tasks
+- Automatically saves tasks with date and time
+- Simple and beginner-friendly code
 def main():
     print("=== SmartTaskLogger ===")
     task = input("Enter your task: ")
